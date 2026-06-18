@@ -32,7 +32,8 @@
 							<ul>
 								<li><a href="#about">About</a></li>
 								<li><a href="#work">Experience</a></li>
-<!--<li><a href="#projects">Projects</a></li>-->
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#recommendations">Recommendations</a></li>
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</nav>
@@ -49,7 +50,7 @@
 								<p>I specialize in PHP, JavaScript, MySQL, and Agile/Scrum environments. I'm known for delivering high-quality features end-to-end — from technical design and development to QA and production support. I was recognized as a <strong>Top 30 Developer</strong> at Paycom for 10 consecutive months.</p>
 								<p>Before transitioning into software engineering, I worked as a Medical Laboratory Technologist at Memorial Hermann Hospital, where I developed strong analytical, problem-solving, and attention-to-detail skills that I bring to every project today.</p>
 								<p>I hold a <strong>B.S. in Computer Science (4.0 GPA)</strong> from the University of Houston – Downtown.</p>
-							    <p>Open to roles in software engineering, QA engineering, data analytics, business analysis, and technical roles across the technology industry.</p>
+								<p>Open to roles in software engineering, QA engineering, data analytics, business analysis, and technical roles across the technology industry.</p>
 							</article>
 
 						<!-- Experience -->
@@ -59,12 +60,11 @@
 								<h3>Software Developer IV</h3>
 								<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>Dec 2022 – May 2026</em></p>
 								<ul>
-									<li>Engineered audit and trigger tables for suppressed fields functionality; built a copy user/permission profile feature to bulk-suppress across 12+ buckets and 1,000+ fields — eliminating manual field-by-field selection and significantly reducing configuration time for users.</li>
-									<li>Designed, enhanced, and internationalized global HR reporting modules — implementing a translation layer that unblocked language support for clients across 180+ countries.</li>
-									<li>Contributed to the Allspark Project front-end migration to React, building filters, landing pages, and edit pages while expanding front-end capabilities across the team.</li>
-									<li>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</li>
+									<li>Designed, enhanced, and internationalized global HR reporting modules — implementing a translation layer that unblocked language support for clients across 180+ countries, focusing on scalable and secure architecture.</li>
+									<li>Implemented a reusable framework injection service across multiple modules, increasing code reusability and meaningfully reducing development time.</li>
 									<li>Optimized MySQL queries on high-volume client databases, improving report generation performance for big data workloads.</li>
-									<li>Migrated legacy advanced filters to modernized versions, significantly improving responsiveness and user experience.</li>
+									<li>Analyzed and refactored codebase for jQuery version compatibility, resolving deprecated functions and preventing production conflicts.</li>
+									<li>Authored technical specifications including requirements, edge cases, and acceptance criteria in collaboration with Product and QA teams.</li>
 									<li>Assumed QA ownership when coverage was unavailable — independently tested features, reproduced defects, validated fixes, and ensured release readiness.</li>
 									<li>Served in on-call rotation; diagnosed and resolved after-hours push-reporting failures, restoring delivery SLAs.</li>
 								</ul>
@@ -94,27 +94,86 @@
 							<article id="projects">
 								<h2 class="major">Projects</h2>
 
-								<h3>MAZE Game</h3>
-								<span class="image main"><img src="images/maze4.jpg" alt="Maze Game" /></span>
-								<p>An interactive maze game built as part of coursework, focusing on algorithmic thinking and game logic.</p>
+								<h3>Suppressed Fields & Copy Feature</h3>
+								<p>Engineered audit and trigger tables for suppressed fields functionality; built a copy user/permission profile feature to bulk-suppress across 12+ buckets and 1,000+ fields — eliminating manual field-by-field selection and significantly reducing configuration time for users.</p>
 
 								<hr />
 
-								<h3>Covid App</h3>
-								<span class="image main"><img src="images/pic03.jpg" alt="Covid App" /></span>
-								<p>A web application for tracking and displaying COVID-19 data, built using Python.</p>
+								<h3>Translation & Internationalization Initiative</h3>
+								<p>Implemented translation support across multiple modules — including the Push Reporting module and Suppressed Fields (Profile & User) — enabling international clients to toggle language settings so that all front-end UI text and prompts dynamically display in their native language, significantly improving accessibility and usability for clients across 180+ countries.</p>
 
 								<hr />
 
-								<h3>Movie Rating App</h3>
-								<span class="image main"><img src="images/movieratingapp.jpg" alt="Movie Rating App" /></span>
-								<p>A movie rating application that allows users to browse, rate, and review films.</p>
+								<h3>Global HCM & International Architecture</h3>
+								<p>Designed and enhanced HR reporting modules for international clients, focusing on scalable and secure architecture accessible across 180+ countries.</p>
 
 								<hr />
 
-								<h3>Display Info — Springboot & Angular</h3>
-								<span class="image main"><img src="images/displayinfospringboot.jpg" alt="Springboot Angular App" /></span>
-								<p>A full-stack application using Spring Boot for the backend and Angular for the front end to display and manage data.</p>
+								<h3>Allspark — Front-End Migration</h3>
+								<p>Contributed to the modernization of legacy front-end pages, building filters, landing pages, and edit pages while expanding front-end capabilities across the team.</p>
+
+								<hr />
+
+								<h3>Casing Format & Global Component</h3>
+								<p>Built a global casing format component allowing users to set uppercase and custom input formatting for employee fields (first name, last name, legal name) — implemented across both legacy and MVC frameworks for reuse across modules. Extended a similar solution for the Advanced Report Writer module with a separate implementation tailored to that area.</p>
+
+								<hr />
+
+								<h3>AppSec & Security Hardening</h3>
+								<p>Resolved AppSec tickets across multiple modules to strengthen application security — implementing cross-site scripting (XSS) prevention, injection attack protection, and output encoding to align with security best practices.</p>
+
+								<hr />
+
+								<h3>ARTemis Automation Testing</h3>
+								<p>Took over the automation testing project following a teammate's departure — added over 400 automated tests using ARTemis and manually troubleshot failing tests to maintain coverage and release confidence.</p>
+
+								<hr />
+
+								<h3>Legacy Advanced Filter Modernization</h3>
+								<p>Migrated legacy advanced filters to modernized versions, significantly improving responsiveness and user experience.</p>
+
+								<hr />
+
+								<h3>jQuery Version Upgrade</h3>
+								<p>Analyzed and refactored codebase for jQuery version compatibility, resolving deprecated functions and preventing production conflicts.</p>
+
+								<hr />
+
+								<h3>Framework Injection Service</h3>
+								<p>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</p>
+
+								<hr />
+
+								<h3>MySQL Query Optimization</h3>
+								<p>Optimized queries on high-volume client databases, improving report generation performance for big data workloads.</p>
+
+								<hr />
+
+								<h3>Reporting Module Maintenance & Bug Resolution</h3>
+								<p>Investigated and resolved critical client-reported bugs and ongoing maintenance tickets for the reporting module — diagnosing root causes, restoring report accuracy, and ensuring stability for live production clients.</p>
+
+							</article>
+
+						<!-- Recommendations -->
+							<article id="recommendations">
+								<h2 class="major">Recommendations</h2>
+
+								<h3>Letter 1</h3>
+								<p><em>Recommendation from <strong>Greg Hite</strong>, Supervisor at Paycom</em></p>
+								<iframe src="images/GregHite.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
+								<ul class="actions">
+									<li><a href="images/GregHite.pdf" class="button" download>Download Letter</a></li>
+								</ul>
+
+								<hr />
+
+								<h3>Letter 2</h3>
+								<p><em>Recommendation from <strong>Steven Prudhomme</strong>, Paycom</em></p>
+								<iframe src="images/StevenPrudhomme.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
+								<ul class="actions">
+									<li><a href="images/StevenPrudhomme.pdf" class="button" download>Download Letter</a></li>
+								</ul>
+
 							</article>
 
 						<!-- Contact -->
@@ -124,7 +183,7 @@
 								<ul class="alt">
 									<li>📧 <a href="mailto:bichngoc0803@yahoo.com">bichngoc0803@yahoo.com</a></li>
 									<li>📞 <a href="tel:2817027590">(281) 702-7590</a></li>
-									<li>📍 Grapevine, Texas</li>
+									<li>📍 Irving, Texas</li>
 								</ul>
 								<ul class="icons">
 									<li><a href="https://www.linkedin.com/in/ngocphan-np/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
