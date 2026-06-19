@@ -1,6 +1,4 @@
 <!DOCTYPE HTML>
-<!--
--->
 <html>
 	<head>
 		<title>Averie (Ngoc) Phan | Software Engineer</title>
@@ -29,8 +27,6 @@
 				text-transform: uppercase;
 				letter-spacing: 1px;
 			}
-
-			/* Remove vertical dividers between nav tabs */
 			#header nav ul li {
 				border-left: none !important;
 				border-right: none !important;
@@ -39,339 +35,318 @@
 				border-left: none !important;
 				border-right: none !important;
 			}
-			/* Remove ONLY the vertical line cutting through the middle of the nav */
 			#header nav.use-middle:after {
 				display: none !important;
 			}
 		</style>
 	</head>
 	<body class="is-preload">
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					<span class="icon fa-gem"></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Averie (Ngoc) Phan</h1>
+						<p>Software Engineer &nbsp;|&nbsp; Full-Stack Developer &nbsp;|&nbsp; Open to New Challenges</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#work">Experience</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#recommendations">Recommendations</a></li>
+						<li><a href="#whyme">What Sets Me Apart</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- About -->
+				<article id="about">
+					<h2 class="major">About Me</h2>
+					<span class="image main"><img src="images/pic01.jpg" alt="Averie Phan" /></span>
+					<p>Hi, I'm Averie! I'm a Software Engineer with 3.5 years of full-stack development experience building scalable HR and reporting platforms at Paycom.</p>
+					<p>I specialize in PHP, JavaScript, MySQL, and Agile/Scrum environments. I'm known for delivering high-quality features end-to-end — from technical design and development to QA and production support. I was recognized as a <strong>Top 30 Developer</strong> at Paycom for 10 consecutive months out of 1,500+ engineers.</p>
+					<p>I hold a <strong>B.S. in Computer Science (4.0 GPA)</strong> from the University of Houston – Downtown and am a <strong>Board-Certified Medical Laboratory Scientist (ASCP)</strong>.</p>
+					<p>Currently open to new opportunities in software engineering, QA engineering, data analytics, business analysis, and technical roles across the technology industry.</p>
+					<p>Before software engineering, I built a career in a completely different field — medical laboratory science. I made the decision to leave it behind and start over from scratch, with no family background in tech and no roadmap. That experience shaped who I am as an engineer: I know how to figure things out independently, push through uncertainty, and hold myself to a high standard no matter the environment.</p>
+					<ul class="actions">
+						<li><a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a></li>
+					</ul>
+				</article>
+
+				<!-- Experience -->
+				<article id="work">
+					<h2 class="major">Experience</h2>
+
+					<h3>Software Developer IV</h3>
+					<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>Dec 2022 – May 2026</em></p>
+					<ul>
+						<li>Recognized as <strong>Top 30 Developer out of 1,500+ engineers</strong> for 10 consecutive months — reflecting consistent technical delivery, code quality, and cross-functional impact.</li>
+						<li>Placed <strong>3rd in company-wide Codeathon 2025</strong> out of hundreds of competing developers.</li>
+						<li>Designed, enhanced, and internationalized global HR reporting modules — implementing a translation layer that unblocked language support for clients across 180+ countries.</li>
+						<li>Built Suppressed Fields & Copy feature — eliminating manual field-by-field selection across 1,000+ fields and 12+ permission buckets, significantly reducing admin configuration time.</li>
+						<li>Took full ownership of automation testing suite after teammate departure — independently built 400+ automated tests using ARTemis while maintaining regular sprint delivery.</li>
+						<li>Assumed QA ownership when coverage was unavailable — tested own and teammates' features, caught defects before production, and ensured release readiness.</li>
+						<li>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</li>
+						<li>Optimized MySQL queries on high-volume client databases, improving report generation performance for large-scale data workloads.</li>
+						<li>Resolved AppSec tickets — implementing XSS prevention, injection attack protection, and output encoding across multiple production modules.</li>
+						<li>Authored technical specifications including requirements, edge cases, and acceptance criteria in collaboration with Product and QA teams.</li>
+						<li>Served in on-call rotation; diagnosed and resolved after-hours push-reporting failures, restoring delivery SLAs.</li>
+					</ul>
+
+					<hr />
+
+					<h3>Software Developer Intern</h3>
+					<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>May 2022 – Sep 2022</em></p>
+					<ul>
+						<li>Collaborated with cross-functional teams to define specifications and develop internal interfaces and services.</li>
+						<li>Delivered UI improvements to the production codebase, enhancing functionality of internal tools used across the organization.</li>
+						<li>Received full-time offer upon completion of internship.</li>
+					</ul>
+
+					<hr />
+
+					<h3>Medical Laboratory Technologist</h3>
+					<p><strong>Memorial Hermann</strong> &mdash; Houston, TX &nbsp;|&nbsp; <em>2016 – 2021</em></p>
+					<ul>
+						<li>Performed and interpreted diagnostic laboratory tests for patient care, communicating critical results to physicians and nursing staff in a fast-paced clinical environment.</li>
+						<li>Maintained and troubleshot automated analyzers, minimizing downtime and ensuring accuracy in high-stakes operations.</li>
+					</ul>
+					<p>🏅 <strong>Employee of the Quarter</strong> — Memorial Hermann Hospital | Q3 2019<br />
+					🏅 <strong>Employee of the Month</strong> — Memorial Hermann Hospital | June 2020</p>
+				</article>
+
+				<!-- Projects -->
+				<article id="projects">
+					<h2 class="major">Projects</h2>
+
+					<h3>Suppressed Fields & Copy Feature</h3>
+					<p>Engineered audit and trigger tables for suppressed fields functionality; built a copy user/permission profile feature to bulk-suppress across 12+ buckets and 1,000+ fields — eliminating manual field-by-field selection and significantly reducing configuration time for users.</p>
+
+					<hr />
+
+					<h3>Translation & Internationalization Initiative</h3>
+					<p>Implemented translation support across multiple modules — including the Push Reporting module and Suppressed Fields (Profile & User) — enabling international clients to toggle language settings so that all front-end UI text and prompts dynamically display in their native language, significantly improving accessibility and usability for clients across 180+ countries.</p>
+
+					<hr />
+
+					<h3>Global HCM & International Architecture</h3>
+					<p>Designed and enhanced HR reporting modules for international clients, focusing on scalable and secure architecture accessible across 180+ countries.</p>
+
+					<hr />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Averie (Ngoc) Phan</h1>
-								<p>Software Engineer &nbsp;|&nbsp; Full-Stack Developer &nbsp;|&nbsp; PHP &bull; JavaScript &bull; MySQL</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#work">Experience</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#recommendations">Recommendations</a></li>
-								<li><a href="#whyme">What Sets Me Apart</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About Me</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="Averie Phan" /></span>
-								<p>Hi, I'm Averie! I'm a Software Engineer with 3.5 years of full-stack development experience building scalable HR and reporting platforms at Paycom.</p>
-								<p>Before software engineering, I built a career in a completely different field — medical laboratory science. I made the decision to leave it behind and start over from scratch, with no family background in tech and no roadmap. That experience shaped who I am as an engineer: I know how to figure things out independently, push through uncertainty, and hold myself to a high standard no matter the environment.</p>
-								<p>I specialize in PHP, JavaScript, MySQL, and Agile/Scrum environments. I'm known for delivering high-quality features end-to-end — from technical design and development to QA and production support. I was recognized as a <strong>Top 30 Developer</strong> at Paycom for 10 consecutive months.</p>
-								<p>I hold a <strong>B.S. in Computer Science (4.0 GPA)</strong> from the University of Houston – Downtown.</p>
-								<p>Currently open to new opportunities in software engineering, QA engineering, data analytics, business analysis, and technical roles across the technology industry.</p>
-								<ul class="actions">
-									<li><a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a></li>
-								</ul>
-							</article>
-
-						<!-- Experience -->
-							<article id="work">
-								<h2 class="major">Experience</h2>
-
-								<h3>Software Developer IV</h3>
-								<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>Dec 2022 – May 2026</em></p>
-								<ul>
-									<li>Designed, enhanced, and internationalized global HR reporting modules — implementing a translation layer that unblocked language support for clients across 180+ countries, focusing on scalable and secure architecture.</li>
-									<li>Implemented a reusable framework injection service across multiple modules, increasing code reusability and meaningfully reducing development time.</li>
-									<li>Optimized MySQL queries on high-volume client databases, improving report generation performance for big data workloads.</li>
-									<li>Analyzed and refactored codebase for jQuery version compatibility, resolving deprecated functions and preventing production conflicts.</li>
-									<li>Authored technical specifications including requirements, edge cases, and acceptance criteria in collaboration with Product and QA teams.</li>
-									<li>Assumed QA ownership when coverage was unavailable — independently tested features, reproduced defects, validated fixes, and ensured release readiness.</li>
-									<li>Served in on-call rotation; diagnosed and resolved after-hours push-reporting failures, restoring delivery SLAs.</li>
-								</ul>
-								<p>🏆 <strong>Top 30 Developer</strong> — July 2023 – April 2024 (10 consecutive months)<br />
-								🥉 <strong>3rd Place — Paycom Codeathon 2025</strong></p>
-
-								<hr />
-
-								<h3>Software Developer Intern</h3>
-								<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>May 2022 – Sep 2022</em></p>
-								<ul>
-									<li>Collaborated with cross-functional teams to define specifications and develop internal interfaces and services.</li>
-									<li>Delivered UI improvements to the production codebase, enhancing functionality of internal tools used across the organization.</li>
-								</ul>
-
-								<hr />
-
-								<h3>Medical Laboratory Technologist</h3>
-								<p><strong>Memorial Hermann</strong> &mdash; Houston, TX &nbsp;|&nbsp; <em>2016 – 2021</em></p>
-								<ul>
-								    <li>Performed and interpreted diagnostic laboratory tests for patient care, communicating critical results to physicians and nursing staff in a fast-paced clinical environment.</li>
-								    <li>Maintained and troubleshot automated analyzers, minimizing downtime and ensuring accuracy in high-stakes operations.</li>
-								</ul>
-								<p>🏅 <strong>Employee of the Quarter</strong> — Memorial Hermann Hospital | Q3 2019<br />
-								🏅 <strong>Employee of the Month</strong> — Memorial Hermann Hospital | June 2020</p>
-							</article>
-
-						<!-- Projects -->
-							<article id="projects">
-								<h2 class="major">Projects</h2>
-
-								<h3>Suppressed Fields & Copy Feature</h3>
-								<p>Engineered audit and trigger tables for suppressed fields functionality; built a copy user/permission profile feature to bulk-suppress across 12+ buckets and 1,000+ fields — eliminating manual field-by-field selection and significantly reducing configuration time for users.</p>
-
-								<hr />
-
-								<h3>Translation & Internationalization Initiative</h3>
-								<p>Implemented translation support across multiple modules — including the Push Reporting module and Suppressed Fields (Profile & User) — enabling international clients to toggle language settings so that all front-end UI text and prompts dynamically display in their native language, significantly improving accessibility and usability for clients across 180+ countries.</p>
-
-								<hr />
-
-								<h3>Global HCM & International Architecture</h3>
-								<p>Designed and enhanced HR reporting modules for international clients, focusing on scalable and secure architecture accessible across 180+ countries.</p>
-
-								<hr />
+					<h3>Allspark — Front-End Migration</h3>
+					<p>Contributed to the modernization of legacy front-end pages, building filters, landing pages, and edit pages while expanding front-end capabilities across the team.</p>
 
-								<h3>Allspark — Front-End Migration</h3>
-								<p>Contributed to the modernization of legacy front-end pages, building filters, landing pages, and edit pages while expanding front-end capabilities across the team.</p>
+					<hr />
 
-								<hr />
+					<h3>Casing Format & Global Component</h3>
+					<p>Built a global casing format component allowing users to set uppercase and custom input formatting for employee fields — implemented across both legacy and MVC frameworks for reuse across modules.</p>
 
-								<h3>Casing Format & Global Component</h3>
-								<p>Built a global casing format component allowing users to set uppercase and custom input formatting for employee fields (first name, last name, legal name) — implemented across both legacy and MVC frameworks for reuse across modules. Extended a similar solution for the Advanced Report Writer module with a separate implementation tailored to that area.</p>
+					<hr />
 
-								<hr />
+					<h3>AppSec & Security Hardening</h3>
+					<p>Resolved AppSec tickets across multiple modules to strengthen application security — implementing cross-site scripting (XSS) prevention, injection attack protection, and output encoding to align with security best practices.</p>
 
-								<h3>AppSec & Security Hardening</h3>
-								<p>Resolved AppSec tickets across multiple modules to strengthen application security — implementing cross-site scripting (XSS) prevention, injection attack protection, and output encoding to align with security best practices.</p>
+					<hr />
 
-								<hr />
+					<h3>ARTemis Automation Testing</h3>
+					<p>Took over the automation testing project following a teammate's departure — added over 400 automated tests using ARTemis and manually troubleshot failing tests to maintain coverage and release confidence.</p>
 
-								<h3>ARTemis Automation Testing</h3>
-								<p>Took over the automation testing project following a teammate's departure — added over 400 automated tests using ARTemis and manually troubleshot failing tests to maintain coverage and release confidence.</p>
+					<hr />
 
-								<hr />
+					<h3>Legacy Advanced Filter Modernization</h3>
+					<p>Migrated legacy advanced filters to modernized versions, significantly improving responsiveness and user experience.</p>
 
-								<h3>Legacy Advanced Filter Modernization</h3>
-								<p>Migrated legacy advanced filters to modernized versions, significantly improving responsiveness and user experience.</p>
+					<hr />
 
-								<hr />
+					<h3>jQuery Version Upgrade</h3>
+					<p>Analyzed and refactored codebase for jQuery version compatibility, resolving deprecated functions and preventing production conflicts.</p>
 
-								<h3>jQuery Version Upgrade</h3>
-								<p>Analyzed and refactored codebase for jQuery version compatibility, resolving deprecated functions and preventing production conflicts.</p>
+					<hr />
 
-								<hr />
+					<h3>Framework Injection Service</h3>
+					<p>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</p>
 
-								<h3>Framework Injection Service</h3>
-								<p>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</p>
+					<hr />
 
-								<hr />
+					<h3>MySQL Query Optimization</h3>
+					<p>Optimized queries on high-volume client databases, improving report generation performance for big data workloads.</p>
 
-								<h3>MySQL Query Optimization</h3>
-								<p>Optimized queries on high-volume client databases, improving report generation performance for big data workloads.</p>
+					<hr />
 
-								<hr />
+					<h3>Reporting Module Maintenance & Bug Resolution</h3>
+					<p>Investigated and resolved critical client-reported bugs and ongoing maintenance tickets for the reporting module — diagnosing root causes, restoring report accuracy, and ensuring stability for live production clients.</p>
+				</article>
 
-								<h3>Reporting Module Maintenance & Bug Resolution</h3>
-								<p>Investigated and resolved critical client-reported bugs and ongoing maintenance tickets for the reporting module — diagnosing root causes, restoring report accuracy, and ensuring stability for live production clients.</p>
+				<!-- What Sets Me Apart -->
+				<article id="whyme">
+					<h2 class="major">What Sets Me Apart</h2>
 
-							</article>
+					<h3>🏅 Proven Excellence in Two Completely Different Fields</h3>
+					<p>What makes my story unique isn't just that I switched careers — it's that I <strong>excelled in both</strong>.</p>
+					<ul>
+						<li>In software engineering, I was recognized as a <strong>Top 30 Developer out of 1,500+</strong> at Paycom for 10 consecutive months, delivered numerous features with consistent on-time delivery, and placed <strong>3rd in a company-wide Codeathon</strong>.</li>
+						<li>In the medical field, I earned <strong>Employee of the Quarter</strong> and <strong>Employee of the Month</strong> at Memorial Hermann Hospital — recognized for precision, reliability, and going above and beyond in a high-stakes environment.</li>
+					</ul>
+					<p>Two completely different industries. Two sets of awards. One consistent standard of excellence. This isn't luck — it's who I am.</p>
 
-						<!-- Why Me -->
-							<article id="whyme">
-								<h2 class="major">What Sets Me Apart</h2>
+					<hr />
 
-								<h3>🌱 A Journey Built From Scratch</h3>
-								<p>I didn't come from a tech family. No one in my family had a background in computer science — there was no roadmap, no one to call for advice, no safety net. I made the decision to leave a stable career in the medical field and start completely over in software engineering, teaching myself what I didn't know and earning everything else through hard work.</p>
-								<p>That leap took courage — and it shaped who I am as an engineer. I know what it means to figure things out on your own, to push through uncertainty, and to keep going when the path isn't clear.</p>
+					<h3>🌱 A Journey Built From Scratch</h3>
+					<p>I didn't come from a tech family. No one in my family had a background in computer science — there was no roadmap, no one to call for advice, no safety net. I made the decision to leave a stable career in the medical field and start completely over in software engineering, teaching myself what I didn't know and earning everything else through hard work.</p>
+					<p>That leap took courage — and it shaped who I am as an engineer. I know what it means to figure things out on your own, to push through uncertainty, and to keep going when the path isn't clear.</p>
 
-								<hr />
+					<hr />
 
-								<h3>🏅 Proven Excellence in Two Completely Different Fields</h3>
-								<p>What makes my story unique isn't just that I switched careers — it's that I <strong>excelled in both</strong>.</p>
-								<ul>
-									<li>In the medical field, I earned <strong>Employee of the Quarter</strong> and <strong>Employee of the Month</strong> at Memorial Hermann Hospital — recognized for precision, reliability, and going above and beyond in a high-stakes environment.</li>
-									<li>In software engineering, I was recognized as a <strong>Top 30 Developer out of 1,500+</strong> at Paycom for 10 consecutive months, completed <strong>10 major feature initiatives with 100% production success</strong>, and placed <strong>3rd in a company-wide Codeathon</strong>.</li>
-								</ul>
-								<p>Two completely different industries. Two sets of awards. One consistent standard of excellence. This isn't luck — it's who I am.</p>
+					<h3>⚡ What I Bring to Your Team</h3>
+					<ul>
+						<li><strong>Full-stack versatility</strong> — I move comfortably between frontend and backend without missing a beat, from UI components to database optimization to API integration. New technologies and platforms are always within reach.</li>
+						<li><strong>Exceptional testing instincts</strong> — I have a radar for finding bugs. I catch issues during design and specs before they ever reach production, and when QA coverage is short I step in and cover the team.</li>
+						<li><strong>Ownership mentality</strong> — I don't wait to be told what to do. Whether it's picking up QA coverage, supporting cross-functional teams, or jumping into on-call rotations, I get things done.</li>
+						<li><strong>Fast learner, proven adapter</strong> — I walked into software engineering with no family background in the field and became a top-ranked engineer. I will do the same at your company.</li>
+						<li><strong>Team multiplier</strong> — Colleagues consistently describe me as someone who makes the team better — collaborative, reliable, and genuinely invested in the people around me.</li>
+						<li><strong>Exceptional people skills</strong> — I work extremely well with people in any setting — remote, in-person, cross-functional, or under pressure. I observe how people work and communicate, and adapt accordingly.</li>
+						<li><strong>International experience</strong> — I've built and maintained platforms used by clients across 180+ countries, with deep experience in internationalization, translation layers, and global scalability.</li>
+					</ul>
 
-								<hr />
+					<hr />
 
-								<h3>⚡ What You Get When You Hire Me</h3>
-								<ul>
-									<li><strong>Full-stack versatility</strong> — I move comfortably between frontend and backend without missing a beat, from UI components to MySQL query optimization to API integration.</li>
-									<li><strong>Zero production defects track record</strong> — I set the standard for attention to detail, catching issues during design and specs before they ever reach production.</li>
-									<li><strong>Ownership mentality</strong> — I don't wait to be told what to do. Whether it's picking up QA coverage, supporting cross-functional teams, or jumping into on-call rotations, I get things done.</li>
-									<li><strong>Fast learner, proven adapter</strong> — I walked into software engineering with no family background in the field and became a top-ranked engineer. I will do the same at your company.</li>
-									<li><strong>Team multiplier</strong> — Colleagues consistently describe me as someone who makes the team better — collaborative, reliable, and genuinely invested in the people around me.</li>
-									<li><strong>Exceptional people skills</strong> — I work extremely well with people in any setting — remote, in-person, cross-functional, or under pressure. One of my greatest strengths is the ability to observe people, understand how they work and communicate, and adapt accordingly. This helps me build strong working relationships quickly and contribute to a positive team dynamic no matter the environment.</li>
-								</ul>
+					<h3>💬 What People Say</h3>
+					<div class="highlight-box">"Her ability to balance high-volume delivery with thoughtful user experience design makes her an invaluable asset to any engineering organization — maintaining a flawless track record of on-time delivery with zero production defects across all ten releases." — <strong>Steven Prudhomme, Manager of Software Development</strong></div>
+					<p style="text-align:center; margin-top: 16px;"><a href="#recommendations" style="font-size: 0.9em; opacity: 0.7; text-decoration: underline;">Read all recommendations →</a></p>
 
-								<hr />
+					<hr />
 
-								<h3>💬 What People Say</h3>
-								<div class="highlight-box">"Her ability to balance high-volume delivery with thoughtful user experience design makes her an invaluable asset to any engineering organization — maintaining a flawless track record of on-time delivery with zero production defects across all ten releases." — <strong>Steven Prudhomme, Manager of Software Development</strong></div>
-								<p style="text-align:center; margin-top: 16px;"><a href="#recommendations" style="font-size: 0.9em; opacity: 0.7; text-decoration: underline;">Read all recommendations →</a></p>
+					<p style="text-align:center;">
+						<a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a>
+					</p>
+				</article>
 
-								<hr />
+				<!-- Recommendations -->
+				<article id="recommendations">
+					<h2 class="major">Recommendations</h2>
 
-								<p style="text-align:center;">
-									<a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a>
-								</p>
+					<h3>Letter 1 — Greg Hite</h3>
+					<p><em>Supervisor of Software Development, Paycom</em></p>
+					<p><strong>Key Highlights:</strong></p>
+					<div class="highlight-box">"She proved herself to be an exceptional software engineer and the backbone of our team — completing ten major feature initiatives with 100% production success."</div>
+					<div class="highlight-box">"Averie sets the standard for exceptional attention to detail — regularly identifying potential oversights during the Design, Specs, and Breakout phases, preventing issues from ever reaching production."</div>
+					<div class="highlight-box">"Averie demonstrates a deep commitment to continuous growth and actively applies new technical expertise to deliver superior outcomes, strengthening both team performance and measurable business impact."</div>
+					<div class="highlight-box">"She elevates everyone around her through her customer-focused, collaborative, adaptable, and relentlessly reliable approach."</div>
+					<div class="highlight-box">"When QA resources were stretched thin, she stepped up without hesitation to test not only her own work but her teammates' projects as well — getting things done without friction."</div>
+					<p><strong>Full Letter:</strong></p>
+					<iframe src="images/GregHite.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
+					<ul class="actions">
+						<li><a href="images/GregHite.pdf" class="button" download>Download Letter</a></li>
+					</ul>
 
-							</article>
+					<hr />
 
-						<!-- Recommendations -->
-							<article id="recommendations">
-								<h2 class="major">Recommendations</h2>
+					<h3>Letter 2 — Steven Prudhomme</h3>
+					<p><em>Manager of Software Development, Paycom</em></p>
+					<p><strong>Key Highlights:</strong></p>
+					<div class="highlight-box">"Her ability to balance high-volume delivery with thoughtful user experience design makes her an invaluable asset to any engineering organization — maintaining a flawless track record of on-time delivery with zero production defects across all ten releases."</div>
+					<div class="highlight-box">"Her solutions consistently demonstrate sophisticated understanding of international business needs — directly opening new revenue streams in global markets while reducing training burdens and legal risks for clients."</div>
+					<div class="highlight-box">"She anticipates client needs beyond the initial requirements, suggesting enhancements that improve usability and prevent configuration errors before they occur."</div>
+					<div class="highlight-box">"What distinguishes Averie is her evolution from skilled implementer to strategic product contributor."</div>
+					<p><strong>Full Letter:</strong></p>
+					<iframe src="images/StevenPrudhomme.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
+					<ul class="actions">
+						<li><a href="images/StevenPrudhomme.pdf" class="button" download>Download Letter</a></li>
+					</ul>
 
-								<h3>Letter 1 — Greg Hite</h3>
-								<p><em>Supervisor of Software Development, Paycom</em></p>
+					<hr />
 
-								<p><strong>Key Highlights:</strong></p>
-								<div class="highlight-box">"She proved herself to be an exceptional software engineer and the backbone of our team — completing ten major feature initiatives with 100% production success."</div>
-								<div class="highlight-box">"Averie sets the standard for exceptional attention to detail — regularly identifying potential oversights during the Design, Specs, and Breakout phases, preventing issues from ever reaching production."</div>
-								<div class="highlight-box">"Averie demonstrates a deep commitment to continuous growth and actively applies new technical expertise to deliver superior outcomes, strengthening both team performance and measurable business impact."</div>
-								<div class="highlight-box">"She elevates everyone around her through her customer-focused, collaborative, adaptable, and relentlessly reliable approach."</div>
-								<div class="highlight-box">"When QA resources were stretched thin, she stepped up without hesitation to test not only her own work but her teammates' projects as well — getting things done without friction."</div>
-
-								<p><strong>Full Letter:</strong></p>
-								<iframe src="images/GregHite.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
-								<ul class="actions">
-									<li><a href="images/GregHite.pdf" class="button" download>Download Letter</a></li>
-								</ul>
-
-								<hr />
-
-								<h3>Letter 2 — Steven Prudhomme</h3>
-								<p><em>Manager of Software Development, Paycom</em></p>
-
-								<p><strong>Key Highlights:</strong></p>
-								<div class="highlight-box">"Her ability to balance high-volume delivery with thoughtful user experience design makes her an invaluable asset to any engineering organization — maintaining a flawless track record of on-time delivery with zero production defects across all ten releases."</div>
-								<div class="highlight-box">"Her solutions consistently demonstrate sophisticated understanding of international business needs — directly opening new revenue streams in global markets while reducing training burdens and legal risks for clients."</div>
-								<div class="highlight-box">"She anticipates client needs beyond the initial requirements, suggesting enhancements that improve usability and prevent configuration errors before they occur."</div>
-								<div class="highlight-box">"What distinguishes Averie is her evolution from skilled implementer to strategic product contributor."</div>
-
-								<p><strong>Full Letter:</strong></p>
-								<iframe src="images/StevenPrudhomme.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
-								<ul class="actions">
-									<li><a href="images/StevenPrudhomme.pdf" class="button" download>Download Letter</a></li>
-								</ul>
-
-								<hr />
-
-								<h3>💼 LinkedIn Recommendations</h3>
-								<p><em>The following recommendations were written by colleagues and mentors on <a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: underline;">LinkedIn 🔗</a>.</em></p>
-
-								<!-- LinkedIn Rec 1 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Kasey Kim</strong> &mdash; <em>Software Engineer at 1Password</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Same team</p>
-									<p style="margin:0; line-height:1.7;">"I would recommend Averie to any team without hesitation. She was one of the first people I worked with when I joined as a new developer, and she set the bar for what a good teammate and engineer looks like. She moves comfortably between frontend and backend work without missing a beat, and was always willing to help with practically anything — consistently and patiently. Beyond that, she genuinely cares about the people she works with. She made the team a better place to learn and grow by always being collaborative, reliable, and willing to help, and I'd jump at the chance to work with her again."</p>
-								</div>
-
-								<!-- LinkedIn Rec 2 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Rahul Kumar Sharma</strong> &mdash; <em>Senior Software Developer | MS in CS, UT Arlington</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Same team</p>
-									<p style="margin:0; line-height:1.7;">Rahul describes Averie as a versatile full-stack engineer who sets the standard for attention to detail, regularly identifying potential oversights during design phases to prevent production defects. He notes her track record of delivering major feature initiatives with 100% production success, and highlights that her technical impact consistently placed her among the <strong>top 30 developers out of 1,500+</strong> in the organization for six consecutive months. He also points to her ownership mindset, communication skills, and collaborative spirit — including a 3rd-place Codeathon finish — as making her an invaluable asset to any team.</p>
-								</div>
-
-								<!-- LinkedIn Rec 3 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Gary Byte</strong> &mdash; <em>Senior Application Architect, Paycom</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Team Lead</p>
-									<p style="margin:0; line-height:1.7;">Gary writes that Averie quickly became someone the team could consistently rely on — not only for technical contributions, but for the positive energy and collaboration she brought every day. He highlights her ability to take full ownership of tasks even in unfamiliar areas, her attention to detail, and his genuine care for doing things the right way. He adds that her personable, supportive presence had a meaningful impact on team culture, especially during busy or challenging periods, and that he would gladly work with her again.</p>
-								</div>
-
-								<!-- LinkedIn Rec 4 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Siyuan Yin</strong> &mdash; <em>Software Engineer at Google</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Different team</p>
-									<p style="margin:0; line-height:1.7;">"Ngoc is one of the warmest and most resourceful teammates I've had the pleasure of working with. She brings a welcoming energy to the team that makes every collaboration a happy and productive experience. Beyond her technical skills, her proactive nature and genuine kindness make her an incredible asset to any workplace culture."</p>
-								</div>
-
-								<!-- LinkedIn Rec 5 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>John Johnson</strong> &mdash; <em>Software Engineer | Leader | Coach (Mentor)</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Mentor</p>
-									<p style="margin:0; line-height:1.7;">John mentored Averie both as an intern and as a full-time developer. He notes her incredible drive for learning and self-improvement during her internship, and an impressive growth in software engineering skills. After she transitioned to full-time, she signed up to mentor subsequent intern classes — bringing the same drive for improvement and instilling it in others. He describes her as a strong developer with solid software engineering skills and a solid foundation of leadership skills as well.</p>
-								</div>
-
-								<!-- LinkedIn Rec 6 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Robin Elliott</strong> &mdash; <em>Manager of Tech New Hire Development & Training, Paycom (Mentor)</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Mentor</p>
-									<p style="margin:0; line-height:1.7;">Robin has worked with and watched Averie grow over 4 years — from intern to professional software developer. She describes Averie as consistently delivering quality, clean, scalable, and maintainable code; never afraid to tackle hard things; and constantly learning and sharing new knowledge with the team. Robin notes that Averie has a winning mindset and is the teammate who always goes above and beyond. Her recommendation is 100% without hesitation.</p>
-								</div>
-
-								<!-- LinkedIn Rec 7 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Khush Upadhyay</strong> &mdash; <em>Full-Stack Developer | Senior to Averie at Paycom</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Senior colleague, 3.5 years</p>
-									<p style="margin:0; line-height:1.7;">Khush worked alongside Averie for 3.5 years and describes her as a developer with strong technical expertise across frontend development, backend integration, and scalable web applications. He highlights her ability to quickly understand requirements, write clean and maintainable code, and deliver consistently — even under tight timelines or changing requirements. He also praises her problem-solving mindset, openness to feedback, and positive attitude, calling her dependable, collaborative, and a genuinely valued member of the team.</p>
-								</div>
-
-								<!-- LinkedIn Rec 8 -->
-								<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-									<p style="margin:0 0 4px 0;"><strong>Jan Rejas II</strong> &mdash; <em>Software Developer, Paycom | University of Houston</em></p>
-									<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Different team</p>
-									<p style="margin:0; line-height:1.7;">Jan was impressed by Averie's adaptability and growth mindset, even across different teams. He notes that she was always collaborative and reliable when discussing core reporting infrastructure, always willing to tackle issues without reservation despite limited prior context, and consistently took time to help others better understand her team's module. He highly recommends her for any company looking for a dedicated and skilled software developer.</p>
-								</div>
-
-								<p style="text-align:center; margin-top: 10px;">
-									<a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" class="button">View All on LinkedIn</a>
-								</p>
-
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<p>Feel free to reach out — I'd love to connect!</p>
-								<ul class="alt">
-									<li>📧 <a href="mailto:bichngoc0803@yahoo.com">bichngoc0803@yahoo.com</a></li>
-									<li>📞 <a href="tel:2817027590">(281) 702-7590</a></li>
-									<li>📍 Grapevine, Texas</li>
-								</ul>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/ngocphan-np/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</article>
+					<h3>💼 LinkedIn Recommendations</h3>
+					<p><em>The following recommendations were written by colleagues and mentors on <a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: underline;">LinkedIn 🔗</a>.</em></p>
 
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Kasey Kim</strong> &mdash; <em>Software Engineer at 1Password</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Same team</p>
+						<p style="margin:0; line-height:1.7;">"I would recommend Averie to any team without hesitation. She was one of the first people I worked with when I joined as a new developer, and she set the bar for what a good teammate and engineer looks like. She moves comfortably between frontend and backend work without missing a beat, and was always willing to help with practically anything — consistently and patiently. Beyond that, she genuinely cares about the people she works with. She made the team a better place to learn and grow by always being collaborative, reliable, and willing to help, and I'd jump at the chance to work with her again."</p>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-					</footer>
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Rahul Kumar Sharma</strong> &mdash; <em>Senior Software Developer | MS in CS, UT Arlington</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Same team</p>
+						<p style="margin:0; line-height:1.7;">Rahul describes Averie as a versatile full-stack engineer who sets the standard for attention to detail, regularly identifying potential oversights during design phases to prevent production defects. He notes her track record of delivering major feature initiatives with 100% production success, and highlights that her technical impact consistently placed her among the <strong>top 30 developers out of 1,500+</strong> in the organization for six consecutive months. He also points to her ownership mindset, communication skills, and collaborative spirit — including a 3rd-place Codeathon finish — as making her an invaluable asset to any team.</p>
+					</div>
+
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Gary Byte</strong> &mdash; <em>Senior Application Architect, Paycom</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Team Lead</p>
+						<p style="margin:0; line-height:1.7;">Gary writes that Averie quickly became someone the team could consistently rely on — not only for technical contributions, but for the positive energy and collaboration she brought every day. He highlights her ability to take full ownership of tasks even in unfamiliar areas, her attention to detail, and his genuine care for doing things the right way. He adds that her personable, supportive presence had a meaningful impact on team culture, especially during busy or challenging periods, and that he would gladly work with her again.</p>
+					</div>
+
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Siyuan Yin</strong> &mdash; <em>Software Engineer at Google</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Different team</p>
+						<p style="margin:0; line-height:1.7;">"Ngoc is one of the warmest and most resourceful teammates I've had the pleasure of working with. She brings a welcoming energy to the team that makes every collaboration a happy and productive experience. Beyond her technical skills, her proactive nature and genuine kindness make her an incredible asset to any workplace culture."</p>
+					</div>
+
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>John Johnson</strong> &mdash; <em>Software Engineer | Leader | Coach (Mentor)</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Mentor</p>
+						<p style="margin:0; line-height:1.7;">John mentored Averie both as an intern and as a full-time developer. He notes her incredible drive for learning and self-improvement during her internship, and an impressive growth in software engineering skills. After she transitioned to full-time, she signed up to mentor subsequent intern classes — bringing the same drive for improvement and instilling it in others. He describes her as a strong developer with solid software engineering skills and a solid foundation of leadership skills as well.</p>
+					</div>
+
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Robin Elliott</strong> &mdash; <em>Manager of Tech New Hire Development & Training, Paycom (Mentor)</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Mentor</p>
+						<p style="margin:0; line-height:1.7;">Robin has worked with and watched Averie grow over 4 years — from intern to professional software developer. She describes Averie as consistently delivering quality, clean, scalable, and maintainable code; never afraid to tackle hard things; and constantly learning and sharing new knowledge with the team. Robin notes that Averie has a winning mindset and is the teammate who always goes above and beyond. Her recommendation is 100% without hesitation.</p>
+					</div>
+
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Khush Upadhyay</strong> &mdash; <em>Full-Stack Developer | Senior to Averie at Paycom</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Senior colleague, 3.5 years</p>
+						<p style="margin:0; line-height:1.7;">Khush worked alongside Averie for 3.5 years and describes her as a developer with strong technical expertise across frontend development, backend integration, and scalable web applications. He highlights her ability to quickly understand requirements, write clean and maintainable code, and deliver consistently — even under tight timelines or changing requirements. He also praises her problem-solving mindset, openness to feedback, and positive attitude, calling her dependable, collaborative, and a genuinely valued member of the team.</p>
+					</div>
+
+					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+						<p style="margin:0 0 4px 0;"><strong>Jan Rejas II</strong> &mdash; <em>Software Developer, Paycom | University of Houston</em></p>
+						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Different team</p>
+						<p style="margin:0; line-height:1.7;">Jan was impressed by Averie's adaptability and growth mindset, even across different teams. He notes that she was always collaborative and reliable when discussing core reporting infrastructure, always willing to tackle issues without reservation despite limited prior context, and consistently took time to help others better understand her team's module. He highly recommends her for any company looking for a dedicated and skilled software developer.</p>
+					</div>
+
+					<p style="text-align:center; margin-top: 10px;">
+						<a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" class="button">View All on LinkedIn</a>
+					</p>
+				</article>
+
+				<!-- Contact -->
+				<article id="contact">
+					<h2 class="major">Contact</h2>
+					<p>Feel free to reach out — I'd love to connect!</p>
+					<ul class="alt">
+						<li>📧 <a href="mailto:bichngoc0803@yahoo.com">bichngoc0803@yahoo.com</a></li>
+						<li>📞 <a href="tel:2817027590">(281) 702-7590</a></li>
+						<li>📍 Grapevine, Texas</li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/ngocphan-np/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</article>
 
 			</div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+			<footer id="footer"></footer>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<div id="bg"></div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
