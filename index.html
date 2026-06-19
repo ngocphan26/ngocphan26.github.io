@@ -38,6 +38,103 @@
 			#header nav.use-middle:after {
 				display: none !important;
 			}
+
+			/* ── Experience cards ── */
+			.exp-card {
+				margin-bottom: 2rem;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid rgba(255,255,255,0.08);
+			}
+			.exp-card:last-child { border-bottom: none; }
+			.exp-header {
+				display: flex;
+				align-items: flex-start;
+				gap: 14px;
+				margin-bottom: 6px;
+			}
+			.exp-logo {
+				width: 42px;
+				height: 42px;
+				border-radius: 8px;
+				background: rgba(255,255,255,0.1);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.3em;
+				flex-shrink: 0;
+			}
+			.exp-meta { flex: 1; }
+			.exp-company {
+				font-weight: 700;
+				font-size: 1.05em;
+				margin: 0 0 2px;
+			}
+			.exp-role {
+				font-size: 0.88em;
+				opacity: 0.75;
+				margin: 0 0 2px;
+			}
+			.exp-dates {
+				font-size: 0.78em;
+				opacity: 0.5;
+				margin: 0;
+			}
+			.exp-bullets {
+				margin: 10px 0 12px 0;
+				padding-left: 1.2em;
+				font-size: 0.88em;
+				line-height: 1.7;
+				opacity: 0.85;
+			}
+			.exp-bullets li { margin-bottom: 4px; }
+
+			/* ── Tech pills ── */
+			.tech-pills {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px;
+				margin-top: 10px;
+			}
+			.pill {
+				font-size: 0.72em;
+				padding: 3px 10px;
+				border-radius: 20px;
+				border: 1px solid rgba(255,255,255,0.2);
+				background: rgba(255,255,255,0.06);
+				color: rgba(255,255,255,0.8);
+				letter-spacing: 0.3px;
+			}
+
+			/* ── Project cards ── */
+			.project-card {
+				margin-bottom: 1.8rem;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid rgba(255,255,255,0.08);
+			}
+			.project-card:last-child { border-bottom: none; }
+			.project-title {
+				font-weight: 700;
+				font-size: 1em;
+				margin: 0 0 4px;
+			}
+			.project-badge {
+				display: inline-block;
+				font-size: 0.68em;
+				padding: 2px 8px;
+				border-radius: 12px;
+				background: rgba(100,180,255,0.15);
+				color: rgba(150,210,255,0.9);
+				border: 1px solid rgba(100,180,255,0.25);
+				margin-bottom: 8px;
+				letter-spacing: 0.3px;
+			}
+			.project-desc {
+				font-size: 0.87em;
+				line-height: 1.65;
+				opacity: 0.85;
+				margin: 0 0 10px;
+			}
+			.project-desc li { margin-bottom: 4px; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -87,105 +184,217 @@
 				<article id="work">
 					<h2 class="major">Experience</h2>
 
-					<h3>Software Developer IV</h3>
-					<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>Dec 2022 – May 2026</em></p>
-					<ul>
-						<li>Recognized as <strong>Top 30 Developer out of 1,500+ engineers</strong> for 10 consecutive months — reflecting consistent technical delivery, code quality, and cross-functional impact.</li>
-						<li>Placed <strong>3rd in company-wide Codeathon 2025</strong> out of hundreds of competing developers.</li>
-						<li>Designed, enhanced, and internationalized global HR reporting modules — implementing a translation layer that unblocked language support for clients across 180+ countries.</li>
-						<li>Built Suppressed Fields & Copy feature — eliminating manual field-by-field selection across 1,000+ fields and 12+ permission buckets, significantly reducing admin configuration time.</li>
-						<li>Took full ownership of automation testing suite after teammate departure — independently built 400+ automated tests using ARTemis while maintaining regular sprint delivery.</li>
-						<li>Assumed QA ownership when coverage was unavailable — tested own and teammates' features, caught defects before production, and ensured release readiness.</li>
-						<li>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</li>
-						<li>Optimized MySQL queries on high-volume client databases, improving report generation performance for large-scale data workloads.</li>
-						<li>Resolved AppSec tickets — implementing XSS prevention, injection attack protection, and output encoding across multiple production modules.</li>
-						<li>Authored technical specifications including requirements, edge cases, and acceptance criteria in collaboration with Product and QA teams.</li>
-						<li>Served in on-call rotation; diagnosed and resolved after-hours push-reporting failures, restoring delivery SLAs.</li>
-					</ul>
+					<!-- Paycom Full-time -->
+					<div class="exp-card">
+						<div class="exp-header">
+							<div class="exp-logo">💼</div>
+							<div class="exp-meta">
+								<p class="exp-company">Paycom</p>
+								<p class="exp-role">Software Developer IV &nbsp;·&nbsp; Full-time</p>
+								<p class="exp-dates">Dec 2022 – May 2026 &nbsp;·&nbsp; Grapevine, TX</p>
+							</div>
+						</div>
+						<ul class="exp-bullets">
+							<li>Placed <strong>3rd in company-wide Codeathon 2025</strong> out of hundreds of developers.</li>
+							<li>Owned <strong>2 major features end-to-end</strong> — solo spec, development, and QA with no dedicated coverage under tight deadlines.</li>
+							<li>Maintained release confidence by assuming <strong>QA ownership</strong> over the past year — catching defects across own and teammates' work before production.</li>
+							<li>Authored technical specs — requirements, edge cases, and acceptance criteria — with Product and QA.</li>
+							<li>Restored delivery SLAs during <strong>after-hours incidents</strong> via on-call rotation using Splunk log analysis.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">jQuery</span>
+							<span class="pill">MVC</span>
+							<span class="pill">i18n</span>
+							<span class="pill">Splunk</span>
+							<span class="pill">Agile/Scrum</span>
+							<span class="pill">REST APIs</span>
+							<span class="pill">Feature Flags</span>
+						</div>
+					</div>
 
-					<hr />
+					<!-- Paycom Intern -->
+					<div class="exp-card">
+						<div class="exp-header">
+							<div class="exp-logo">🎓</div>
+							<div class="exp-meta">
+								<p class="exp-company">Paycom</p>
+								<p class="exp-role">Software Developer Intern</p>
+								<p class="exp-dates">May 2022 – Sep 2022 &nbsp;·&nbsp; Grapevine, TX</p>
+							</div>
+						</div>
+						<ul class="exp-bullets">
+							<li>Built UI improvements and collaborated on specs across cross-functional teams.</li>
+							<li>Received a <strong>full-time offer</strong> upon completion of internship.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">HTML/CSS</span>
+							<span class="pill">MySQL</span>
+						</div>
+					</div>
 
-					<h3>Software Developer Intern</h3>
-					<p><strong>Paycom</strong> &mdash; Grapevine, TX &nbsp;|&nbsp; <em>May 2022 – Sep 2022</em></p>
-					<ul>
-						<li>Collaborated with cross-functional teams to define specifications and develop internal interfaces and services.</li>
-						<li>Delivered UI improvements to the production codebase, enhancing functionality of internal tools used across the organization.</li>
-						<li>Received full-time offer upon completion of internship.</li>
-					</ul>
-
-					<hr />
-
-					<h3>Medical Laboratory Technologist</h3>
-					<p><strong>Memorial Hermann</strong> &mdash; Houston, TX &nbsp;|&nbsp; <em>2016 – 2021</em></p>
-					<ul>
-						<li>Performed and interpreted diagnostic laboratory tests for patient care, communicating critical results to physicians and nursing staff in a fast-paced clinical environment.</li>
-						<li>Maintained and troubleshot automated analyzers, minimizing downtime and ensuring accuracy in high-stakes operations.</li>
-					</ul>
-					<p>🏅 <strong>Employee of the Quarter</strong> — Memorial Hermann Hospital | Q3 2019<br />
-					🏅 <strong>Employee of the Month</strong> — Memorial Hermann Hospital | June 2020</p>
+					<!-- Medical Lab -->
+					<div class="exp-card">
+						<div class="exp-header">
+							<div class="exp-logo">🔬</div>
+							<div class="exp-meta">
+								<p class="exp-company">Memorial Hermann Health System</p>
+								<p class="exp-role">Medical Laboratory Technologist &nbsp;·&nbsp; Full-time</p>
+								<p class="exp-dates">2016 – 2021 &nbsp;·&nbsp; Houston, TX</p>
+							</div>
+						</div>
+						<ul class="exp-bullets">
+							<li>Interpreted diagnostic tests and communicated critical results in a high-stakes clinical environment.</li>
+							<li>🏅 <strong>Employee of the Quarter</strong> — Q3 2019 &nbsp;|&nbsp; 🏅 <strong>Employee of the Month</strong> — June 2020</li>
+						</ul>
+					</div>
 				</article>
 
 				<!-- Projects -->
 				<article id="projects">
 					<h2 class="major">Projects</h2>
 
-					<h3>Suppressed Fields & Copy Feature</h3>
-					<p>Engineered audit and trigger tables for suppressed fields functionality; built a copy user/permission profile feature to bulk-suppress across 12+ buckets and 1,000+ fields — eliminating manual field-by-field selection and significantly reducing configuration time for users.</p>
+					<p style="font-size:0.85em; opacity:0.6; margin-bottom:1.5rem;">★ = Solo end-to-end ownership — spec, blueprint, development, test authoring & QA</p>
 
-					<hr />
+					<!-- Featured -->
+					<div class="project-card">
+						<p class="project-title">Suppressed Fields Usability Items</p>
+						<span class="project-badge">★ Solo Ownership</span>
+						<ul class="project-desc">
+							<li><strong>Closed a critical audit gap</strong> by building audit/trigger tables from scratch — tracking field changes, old/new values, and timestamps with search, sort, pagination, and export (.csv, .xlsx, PDF).</li>
+							<li>Extended testing to permission profiles, added unsaved-changes validation, fixed broken field ordering, and applied <strong>i18n translation</strong> throughout.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">jQuery</span>
+							<span class="pill">MVC</span>
+							<span class="pill">i18n</span>
+							<span class="pill">Audit/Trigger Tables</span>
+							<span class="pill">Feature Flags</span>
+						</div>
+					</div>
 
-					<h3>Translation & Internationalization Initiative</h3>
-					<p>Implemented translation support across multiple modules — including the Push Reporting module and Suppressed Fields (Profile & User) — enabling international clients to toggle language settings so that all front-end UI text and prompts dynamically display in their native language, significantly improving accessibility and usability for clients across 180+ countries.</p>
+					<div class="project-card">
+						<p class="project-title">Copy and Search in Suppressed Fields</p>
+						<span class="project-badge">★ Solo Ownership</span>
+						<ul class="project-desc">
+							<li><strong>Saved administrators hours</strong> by building a brand-new copy feature for permission profiles — dynamically loading field counts, bucket info, and descriptions per user or profile selection.</li>
+							<li>Built <strong>real-time per-bucket search bars</strong> and live field count indicators — resolved a legacy query bug returning incorrect results.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">jQuery</span>
+							<span class="pill">MVC</span>
+							<span class="pill">i18n</span>
+							<span class="pill">Legacy Framework</span>
+							<span class="pill">Feature Flags</span>
+						</div>
+					</div>
 
-					<hr />
+					<div class="project-card">
+						<p class="project-title">ARW Field Limit Warning System</p>
+						<ul class="project-desc">
+							<li>Built a live field count tracker in ARW — surfacing a <strong>warning near 500 fields</strong> and a <strong>red alert when exceeded</strong>, both carrying through to report generation.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">ARW</span>
+							<span class="pill">Feature Flags</span>
+						</div>
+					</div>
 
-					<h3>Global HCM & International Architecture</h3>
-					<p>Designed and enhanced HR reporting modules for international clients, focusing on scalable and secure architecture accessible across 180+ countries.</p>
+					<div class="project-card">
+						<p class="project-title">Name Casing Options in Advanced Report Writer</p>
+						<ul class="project-desc">
+							<li>Enforced <strong>'Upper Case' as default across 13 name fields</strong> and added 'User Entry' option — protecting existing client automation on flag enablement.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MVC</span>
+							<span class="pill">Feature Flags</span>
+							<span class="pill">i18n</span>
+						</div>
+					</div>
 
-					<hr />
+					<div class="project-card">
+						<p class="project-title">Reports Casing — EE Names (Legacy & Monte Carlo)</p>
+						<ul class="project-desc">
+							<li>Built reusable <strong>ReportsCasingService</strong> for Legacy and MVC frameworks using regex — adopted by multiple module teams. Assisted adoption and performed all owned ticket testing.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MVC</span>
+							<span class="pill">Legacy Framework</span>
+							<span class="pill">Regex</span>
+							<span class="pill">Feature Flags</span>
+						</div>
+					</div>
 
-					<h3>Allspark — Front-End Migration</h3>
-					<p>Contributed to the modernization of legacy front-end pages, building filters, landing pages, and edit pages while expanding front-end capabilities across the team.</p>
+					<div class="project-card">
+						<p class="project-title">International Currency Display in Reports</p>
+						<ul class="project-desc">
+							<li>Enabled <strong>international clients</strong> to view monetary values in local currency by adding currency formatting and display to reporting modules.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">i18n</span>
+						</div>
+					</div>
 
-					<hr />
+					<div class="project-card">
+						<p class="project-title">ARW Filter Display Enhancement</p>
+						<ul class="project-desc">
+							<li>Implemented dynamic filter display logic ensuring selected filters render with <strong>accurate descriptions on the correct module tabs</strong> in ARW.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">jQuery</span>
+							<span class="pill">MVC</span>
+						</div>
+					</div>
 
-					<h3>Casing Format & Global Component</h3>
-					<p>Built a global casing format component allowing users to set uppercase and custom input formatting for employee fields — implemented across both legacy and MVC frameworks for reuse across modules.</p>
+					<div class="project-card">
+						<p class="project-title">AppSec & Security Hardening</p>
+						<ul class="project-desc">
+							<li>Reduced attack surface across multiple modules — implementing <strong>XSS prevention, injection protection, and output encoding</strong>.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">XSS Prevention</span>
+							<span class="pill">Output Encoding</span>
+						</div>
+					</div>
 
-					<hr />
-
-					<h3>AppSec & Security Hardening</h3>
-					<p>Resolved AppSec tickets across multiple modules to strengthen application security — implementing cross-site scripting (XSS) prevention, injection attack protection, and output encoding to align with security best practices.</p>
-
-					<hr />
-
-					<h3>ARTemis Automation Testing</h3>
-					<p>Took over the automation testing project following a teammate's departure — added over 400 automated tests using ARTemis and manually troubleshot failing tests to maintain coverage and release confidence.</p>
-
-					<hr />
-
-					<h3>Legacy Advanced Filter Modernization</h3>
-					<p>Migrated legacy advanced filters to modernized versions, significantly improving responsiveness and user experience.</p>
-
-					<hr />
-
-					<h3>jQuery Version Upgrade</h3>
-					<p>Analyzed and refactored codebase for jQuery version compatibility, resolving deprecated functions and preventing production conflicts.</p>
-
-					<hr />
-
-					<h3>Framework Injection Service</h3>
-					<p>Implemented a reusable framework injection service across multiple modules, increasing code reusability and reducing development time.</p>
-
-					<hr />
-
-					<h3>MySQL Query Optimization</h3>
-					<p>Optimized queries on high-volume client databases, improving report generation performance for big data workloads.</p>
-
-					<hr />
-
-					<h3>Reporting Module Maintenance & Bug Resolution</h3>
-					<p>Investigated and resolved critical client-reported bugs and ongoing maintenance tickets for the reporting module — diagnosing root causes, restoring report accuracy, and ensuring stability for live production clients.</p>
+					<div class="project-card">
+						<p class="project-title">Reporting Module Maintenance & Bug Resolution</p>
+						<ul class="project-desc">
+							<li>Maintained production stability over 3.5 years — resolved <strong>40+ client-reported bugs</strong> via Splunk log analysis and internal documentation.</li>
+						</ul>
+						<div class="tech-pills">
+							<span class="pill">PHP</span>
+							<span class="pill">JavaScript</span>
+							<span class="pill">MySQL</span>
+							<span class="pill">Splunk</span>
+						</div>
+					</div>
 				</article>
 
 				<!-- What Sets Me Apart -->
