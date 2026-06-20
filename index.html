@@ -17,16 +17,6 @@
 				font-size: 0.95em;
 				line-height: 1.6;
 			}
-			.highlight-box span {
-				font-style: normal;
-				font-weight: bold;
-				display: block;
-				margin-bottom: 4px;
-				font-size: 0.8em;
-				opacity: 0.6;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-			}
 			#header nav ul li {
 				border-left: none !important;
 				border-right: none !important;
@@ -64,21 +54,9 @@
 				flex-shrink: 0;
 			}
 			.exp-meta { flex: 1; }
-			.exp-company {
-				font-weight: 700;
-				font-size: 1.05em;
-				margin: 0 0 2px;
-			}
-			.exp-role {
-				font-size: 0.88em;
-				opacity: 0.75;
-				margin: 0 0 2px;
-			}
-			.exp-dates {
-				font-size: 0.78em;
-				opacity: 0.5;
-				margin: 0;
-			}
+			.exp-company { font-weight: 700; font-size: 1.05em; margin: 0 0 2px; }
+			.exp-role { font-size: 0.88em; opacity: 0.75; margin: 0 0 2px; }
+			.exp-dates { font-size: 0.78em; opacity: 0.5; margin: 0; }
 			.exp-bullets {
 				margin: 10px 0 12px 0;
 				padding-left: 1.2em;
@@ -89,12 +67,7 @@
 			.exp-bullets li { margin-bottom: 4px; }
 
 			/* ── Tech pills ── */
-			.tech-pills {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 6px;
-				margin-top: 10px;
-			}
+			.tech-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 			.pill {
 				font-size: 0.72em;
 				padding: 3px 10px;
@@ -112,11 +85,7 @@
 				border-bottom: 1px solid rgba(255,255,255,0.08);
 			}
 			.project-card:last-child { border-bottom: none; }
-			.project-title {
-				font-weight: 700;
-				font-size: 1em;
-				margin: 0 0 4px;
-			}
+			.project-title { font-weight: 700; font-size: 1em; margin: 0 0 4px; }
 			.project-badge {
 				display: inline-block;
 				font-size: 0.68em;
@@ -128,13 +97,55 @@
 				margin-bottom: 8px;
 				letter-spacing: 0.3px;
 			}
-			.project-desc {
-				font-size: 0.87em;
-				line-height: 1.65;
-				opacity: 0.85;
-				margin: 0 0 10px;
-			}
+			.project-desc { font-size: 0.87em; line-height: 1.65; opacity: 0.85; margin: 0 0 10px; }
 			.project-desc li { margin-bottom: 4px; }
+
+			/* ── Recommendation cards ── */
+			.rec-card {
+				background: rgba(255,255,255,0.04);
+				border-radius: 10px;
+				padding: 18px 20px;
+				margin-bottom: 20px;
+				border: 1px solid rgba(255,255,255,0.08);
+			}
+			.rec-name { font-weight: 700; margin: 0 0 2px; font-size: 0.95em; }
+			.rec-title { font-size: 0.78em; opacity: 0.6; margin: 0 0 12px; }
+			.rec-quote {
+				font-style: italic;
+				font-size: 0.88em;
+				line-height: 1.7;
+				opacity: 0.88;
+				margin: 0 0 8px;
+				border-left: 3px solid rgba(255,255,255,0.2);
+				padding-left: 12px;
+			}
+			.toggle-btn {
+				background: none;
+				border: 1px solid rgba(255,255,255,0.25);
+				color: rgba(255,255,255,0.7);
+				padding: 5px 14px;
+				border-radius: 20px;
+				font-size: 0.75em;
+				cursor: pointer;
+				margin-top: 10px;
+				transition: all 0.2s;
+			}
+			.toggle-btn:hover {
+				background: rgba(255,255,255,0.08);
+				color: white;
+			}
+			.letter-content { display: none; margin-top: 14px; }
+			.letter-content.open { display: block; }
+
+			/* ── Resume tab ── */
+			.resume-container { text-align: center; }
+			.resume-container iframe {
+				width: 100%;
+				height: 520px;
+				border: none;
+				border-radius: 8px;
+				margin: 16px 0;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -158,6 +169,7 @@
 						<li><a href="#projects">Projects</a></li>
 						<li><a href="#recommendations">Recommendations</a></li>
 						<li><a href="#whyme">What Sets Me Apart</a></li>
+						<li><a href="#resume">Resume</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -175,16 +187,12 @@
 					<p>I hold a <strong>B.S. in Computer Science (4.0 GPA)</strong> from the University of Houston – Downtown and am a <strong>Board-Certified Medical Laboratory Scientist (ASCP)</strong>.</p>
 					<p>Currently open to new opportunities in software engineering, QA engineering, data analytics, business analysis, and technical roles across the technology industry.</p>
 					<p>Before software engineering, I built a career in a completely different field — medical laboratory science. I made the decision to leave it behind and start over from scratch, with no family background in tech and no roadmap. That experience shaped who I am as an engineer: I know how to figure things out independently, push through uncertainty, and hold myself to a high standard no matter the environment.</p>
-					<ul class="actions">
-						<li><a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a></li>
-					</ul>
 				</article>
 
 				<!-- Experience -->
 				<article id="work">
 					<h2 class="major">Experience</h2>
 
-					<!-- Paycom Full-time -->
 					<div class="exp-card">
 						<div class="exp-header">
 							<div class="exp-logo">💼</div>
@@ -211,10 +219,9 @@
 							<span class="pill">Splunk</span>
 							<span class="pill">Agile/Scrum</span>
 							<span class="pill">REST APIs</span>
-							</div>
+						</div>
 					</div>
 
-					<!-- Paycom Intern -->
 					<div class="exp-card">
 						<div class="exp-header">
 							<div class="exp-logo">🎓</div>
@@ -236,7 +243,6 @@
 						</div>
 					</div>
 
-					<!-- Medical Lab -->
 					<div class="exp-card">
 						<div class="exp-header">
 							<div class="exp-logo">🔬</div>
@@ -257,9 +263,6 @@
 				<article id="projects">
 					<h2 class="major">Projects</h2>
 
-					<p style="font-size:0.85em; opacity:0.6; margin-bottom:1.5rem;">★ = Solo end-to-end ownership — spec, blueprint, development, test authoring & QA</p>
-
-					<!-- Featured -->
 					<div class="project-card">
 						<p class="project-title">Suppressed Fields Usability Items</p>
 						<span class="project-badge">★ Solo Ownership</span>
@@ -274,8 +277,7 @@
 							<span class="pill">jQuery</span>
 							<span class="pill">MVC</span>
 							<span class="pill">i18n</span>
-							
-							</div>
+						</div>
 					</div>
 
 					<div class="project-card">
@@ -292,20 +294,18 @@
 							<span class="pill">jQuery</span>
 							<span class="pill">MVC</span>
 							<span class="pill">i18n</span>
-							
-							</div>
+						</div>
 					</div>
 
 					<div class="project-card">
 						<p class="project-title">ARW Field Limit Warning System</p>
 						<ul class="project-desc">
-							<li>Built a live field count tracker in ARW — surfacing a <strong>warning near 500 fields</strong> and a <strong>red alert when exceeded</strong>, both carrying through to report generation.</li>
+							<li>Built a live field count tracker — <strong>warning near 500 fields</strong> and <strong>red alert when exceeded</strong>, both carrying through to report generation.</li>
 						</ul>
 						<div class="tech-pills">
 							<span class="pill">PHP</span>
 							<span class="pill">JavaScript</span>
-							<span class="pill">MySQL</span>
-								</div>
+						</div>
 					</div>
 
 					<div class="project-card">
@@ -315,36 +315,33 @@
 						</ul>
 						<div class="tech-pills">
 							<span class="pill">PHP</span>
-							<span class="pill">MySQL</span>
 							<span class="pill">JavaScript</span>
 							<span class="pill">MVC</span>
-								<span class="pill">i18n</span>
+							<span class="pill">i18n</span>
 						</div>
 					</div>
 
 					<div class="project-card">
 						<p class="project-title">Reports Casing — EE Names (Legacy & Monte Carlo)</p>
 						<ul class="project-desc">
-							<li>Built reusable <strong>ReportsCasingService</strong> for Legacy and MVC frameworks using regex — adopted by multiple module teams. Assisted adoption and performed all owned ticket testing.</li>
+							<li>Built reusable <strong>ReportsCasingService</strong> for Legacy and MVC frameworks using regex — adopted by multiple module teams.</li>
 						</ul>
 						<div class="tech-pills">
 							<span class="pill">PHP</span>
 							<span class="pill">MySQL</span>
 							<span class="pill">JavaScript</span>
 							<span class="pill">MVC</span>
-							
 							<span class="pill">Regex</span>
-							</div>
+						</div>
 					</div>
 
 					<div class="project-card">
 						<p class="project-title">International Currency Display in Reports</p>
 						<ul class="project-desc">
-							<li>Enabled <strong>international clients</strong> to view monetary values in local currency by adding currency formatting and display to reporting modules.</li>
+							<li>Enabled <strong>international clients</strong> to view monetary values in local currency across reporting modules.</li>
 						</ul>
 						<div class="tech-pills">
 							<span class="pill">PHP</span>
-							<span class="pill">MySQL</span>
 							<span class="pill">JavaScript</span>
 							<span class="pill">i18n</span>
 						</div>
@@ -353,13 +350,12 @@
 					<div class="project-card">
 						<p class="project-title">ARW Filter Display Enhancement</p>
 						<ul class="project-desc">
-							<li>Implemented dynamic filter display logic ensuring selected filters render with <strong>accurate descriptions on the correct module tabs</strong> in ARW.</li>
+							<li>Implemented dynamic filter display logic ensuring selected filters render with <strong>accurate descriptions on the correct module tabs</strong>.</li>
 						</ul>
 						<div class="tech-pills">
 							<span class="pill">PHP</span>
 							<span class="pill">JavaScript</span>
 							<span class="pill">jQuery</span>
-							<span class="pill">MVC</span>
 						</div>
 					</div>
 
@@ -371,7 +367,6 @@
 						<div class="tech-pills">
 							<span class="pill">PHP</span>
 							<span class="pill">JavaScript</span>
-
 						</div>
 					</div>
 
@@ -396,132 +391,123 @@
 					<h3>🏅 Proven Excellence in Two Completely Different Fields</h3>
 					<p>What makes my story unique isn't just that I switched careers — it's that I <strong>excelled in both</strong>.</p>
 					<ul>
-						<li>In software engineering, I was recognized as a <strong>Top 30 Developer out of 1,500+</strong> at Paycom for 10 consecutive months, delivered numerous features with consistent on-time delivery, and placed <strong>3rd in a company-wide Codeathon</strong>.</li>
-						<li>In the medical field, I earned <strong>Employee of the Quarter</strong> and <strong>Employee of the Month</strong> at Memorial Hermann Hospital — recognized for precision, reliability, and going above and beyond in a high-stakes environment.</li>
+						<li>In software engineering, recognized as <strong>Top 30 Developer out of 1,500+</strong> for 10 consecutive months, and placed <strong>3rd in a company-wide Codeathon</strong>.</li>
+						<li>In the medical field, earned <strong>Employee of the Quarter</strong> and <strong>Employee of the Month</strong> at Memorial Hermann Hospital.</li>
 					</ul>
-					<p>Two completely different industries. Two sets of awards. One consistent standard of excellence. This isn't luck — it's who I am.</p>
+					<p>Two completely different industries. Two sets of awards. One consistent standard of excellence.</p>
 
 					<hr />
 
 					<h3>🌱 A Journey Built From Scratch</h3>
-					<p>I didn't come from a tech family. No one in my family had a background in computer science — there was no roadmap, no one to call for advice, no safety net. I made the decision to leave a stable career in the medical field and start completely over in software engineering, teaching myself what I didn't know and earning everything else through hard work.</p>
-					<p>That leap took courage — and it shaped who I am as an engineer. I know what it means to figure things out on your own, to push through uncertainty, and to keep going when the path isn't clear.</p>
+					<p>I didn't come from a tech family — no roadmap, no safety net. I left a stable medical career and started completely over in software engineering, teaching myself what I didn't know and earning everything else through hard work.</p>
 
 					<hr />
 
 					<h3>⚡ What I Bring to Your Team</h3>
 					<ul>
-						<li><strong>Full-stack versatility</strong> — I move comfortably between frontend and backend without missing a beat, from UI components to database optimization to API integration. New technologies and platforms are always within reach.</li>
-						<li><strong>Exceptional testing instincts</strong> — I have a radar for finding bugs. I catch issues during design and specs before they ever reach production, and when QA coverage is short I step in and cover the team.</li>
-						<li><strong>Ownership mentality</strong> — I don't wait to be told what to do. Whether it's picking up QA coverage, supporting cross-functional teams, or jumping into on-call rotations, I get things done.</li>
-						<li><strong>Fast learner, proven adapter</strong> — I walked into software engineering with no family background in the field and became a top-ranked engineer. I will do the same at your company.</li>
-						<li><strong>Team multiplier</strong> — Colleagues consistently describe me as someone who makes the team better — collaborative, reliable, and genuinely invested in the people around me.</li>
-						<li><strong>Exceptional people skills</strong> — I work extremely well with people in any setting — remote, in-person, cross-functional, or under pressure. I observe how people work and communicate, and adapt accordingly.</li>
-						<li><strong>International experience</strong> — I've built and maintained platforms used by clients across 180+ countries, with deep experience in internationalization, translation layers, and global scalability.</li>
+						<li><strong>Full-stack versatility</strong> — frontend to backend, UI to database optimization.</li>
+						<li><strong>Exceptional testing instincts</strong> — I catch issues before they reach production and step in when QA coverage is short.</li>
+						<li><strong>Ownership mentality</strong> — I don't wait to be told what to do. I get things done.</li>
+						<li><strong>Fast learner, proven adapter</strong> — switched careers from scratch and became a top-ranked engineer. I'll do the same at your company.</li>
+						<li><strong>Team multiplier</strong> — collaborative, reliable, and genuinely invested in the people around me.</li>
+						<li><strong>International experience</strong> — built platforms for clients across 180+ countries.</li>
 					</ul>
 
 					<hr />
 
 					<h3>💬 What People Say</h3>
-					<div class="highlight-box">"Her ability to balance high-volume delivery with thoughtful user experience design makes her an invaluable asset to any engineering organization — maintaining a flawless track record of on-time delivery with zero production defects across all ten releases." — <strong>Steven Prudhomme, Manager of Software Development</strong></div>
+					<div class="highlight-box">"Her ability to balance <strong>high-volume delivery</strong> with thoughtful user experience design — maintaining a <strong>flawless track record</strong> of on-time delivery with <strong>zero production defects</strong> across all ten releases." — <strong>Steven Prudhomme, Manager of Software Development</strong></div>
 					<p style="text-align:center; margin-top: 16px;"><a href="#recommendations" style="font-size: 0.9em; opacity: 0.7; text-decoration: underline;">Read all recommendations →</a></p>
-
-					<hr />
-
-					<p style="text-align:center;">
-						<a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a>
-					</p>
 				</article>
 
 				<!-- Recommendations -->
 				<article id="recommendations">
 					<h2 class="major">Recommendations</h2>
 
-					<h3>Letter 1 — Greg Hite</h3>
-					<p><em>Supervisor of Software Development, Paycom</em></p>
-					<p><strong>Key Highlights:</strong></p>
-					<div class="highlight-box">"She proved herself to be an exceptional software engineer and the backbone of our team — completing ten major feature initiatives with 100% production success."</div>
-					<div class="highlight-box">"Averie sets the standard for exceptional attention to detail — regularly identifying potential oversights during the Design, Specs, and Breakout phases, preventing issues from ever reaching production."</div>
-					<div class="highlight-box">"Averie demonstrates a deep commitment to continuous growth and actively applies new technical expertise to deliver superior outcomes, strengthening both team performance and measurable business impact."</div>
-					<div class="highlight-box">"She elevates everyone around her through her customer-focused, collaborative, adaptable, and relentlessly reliable approach."</div>
-					<div class="highlight-box">"When QA resources were stretched thin, she stepped up without hesitation to test not only her own work but her teammates' projects as well — getting things done without friction."</div>
-					<p><strong>Full Letter:</strong></p>
-					<iframe src="images/GregHite.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
-					<ul class="actions">
-						<li><a href="images/GregHite.pdf" class="button" download>Download Letter</a></li>
-					</ul>
-
-					<hr />
-
-					<h3>Letter 2 — Steven Prudhomme</h3>
-					<p><em>Manager of Software Development, Paycom</em></p>
-					<p><strong>Key Highlights:</strong></p>
-					<div class="highlight-box">"Her ability to balance high-volume delivery with thoughtful user experience design makes her an invaluable asset to any engineering organization — maintaining a flawless track record of on-time delivery with zero production defects across all ten releases."</div>
-					<div class="highlight-box">"Her solutions consistently demonstrate sophisticated understanding of international business needs — directly opening new revenue streams in global markets while reducing training burdens and legal risks for clients."</div>
-					<div class="highlight-box">"She anticipates client needs beyond the initial requirements, suggesting enhancements that improve usability and prevent configuration errors before they occur."</div>
-					<div class="highlight-box">"What distinguishes Averie is her evolution from skilled implementer to strategic product contributor."</div>
-					<p><strong>Full Letter:</strong></p>
-					<iframe src="images/StevenPrudhomme.pdf" width="100%" height="500px" style="border: none; border-radius: 6px; margin-bottom: 10px;"></iframe>
-					<ul class="actions">
-						<li><a href="images/StevenPrudhomme.pdf" class="button" download>Download Letter</a></li>
-					</ul>
-
-					<hr />
-
-					<h3>💼 LinkedIn Recommendations</h3>
-					<p><em>The following recommendations were written by colleagues and mentors on <a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" style="font-weight: bold; text-decoration: underline;">LinkedIn 🔗</a>.</em></p>
-
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Kasey Kim</strong> &mdash; <em>Software Engineer at 1Password</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Same team</p>
-						<p style="margin:0; line-height:1.7;">"I would recommend Averie to any team without hesitation. She was one of the first people I worked with when I joined as a new developer, and she set the bar for what a good teammate and engineer looks like. She moves comfortably between frontend and backend work without missing a beat, and was always willing to help with practically anything — consistently and patiently. Beyond that, she genuinely cares about the people she works with. She made the team a better place to learn and grow by always being collaborative, reliable, and willing to help, and I'd jump at the chance to work with her again."</p>
+					<!-- Letter 1 -->
+					<div class="rec-card">
+						<p class="rec-name">Greg Hite</p>
+						<p class="rec-title">Supervisor of Software Development, Paycom</p>
+						<p class="rec-quote">"She proved herself to be an <strong>exceptional software engineer</strong> and the <strong>backbone of our team</strong> — completing ten major feature initiatives with <strong>100% production success</strong>."</p>
+						<p class="rec-quote">"Averie sets the <strong>standard for attention to detail</strong> — regularly identifying potential oversights during the Design and Specs phases, <strong>preventing issues from ever reaching production</strong>."</p>
+						<button class="toggle-btn" onclick="toggleLetter('greg')">+ View Full Letter</button>
+						<div id="greg" class="letter-content">
+							<iframe src="images/GregHite.pdf" width="100%" height="500px"></iframe>
+							<ul class="actions" style="margin-top:10px;">
+								<li><a href="images/GregHite.pdf" class="button" download>⬇ Download Letter</a></li>
+							</ul>
+						</div>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Rahul Kumar Sharma</strong> &mdash; <em>Senior Software Developer | MS in CS, UT Arlington</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Same team</p>
-						<p style="margin:0; line-height:1.7;">Rahul describes Averie as a versatile full-stack engineer who sets the standard for attention to detail, regularly identifying potential oversights during design phases to prevent production defects. He notes her track record of delivering major feature initiatives with 100% production success, and highlights that her technical impact consistently placed her among the <strong>top 30 developers out of 1,500+</strong> in the organization for six consecutive months. He also points to her ownership mindset, communication skills, and collaborative spirit — including a 3rd-place Codeathon finish — as making her an invaluable asset to any team.</p>
+					<!-- Letter 2 -->
+					<div class="rec-card">
+						<p class="rec-name">Steven Prudhomme</p>
+						<p class="rec-title">Manager of Software Development, Paycom</p>
+						<p class="rec-quote">"Her ability to balance <strong>high-volume delivery</strong> with thoughtful user experience design — maintaining a <strong>flawless track record of on-time delivery</strong> with <strong>zero production defects</strong> across all ten releases."</p>
+						<p class="rec-quote">"What distinguishes Averie is her evolution from <strong>skilled implementer</strong> to <strong>strategic product contributor</strong>."</p>
+						<button class="toggle-btn" onclick="toggleLetter('steven')">+ View Full Letter</button>
+						<div id="steven" class="letter-content">
+							<iframe src="images/StevenPrudhomme.pdf" width="100%" height="500px"></iframe>
+							<ul class="actions" style="margin-top:10px;">
+								<li><a href="images/StevenPrudhomme.pdf" class="button" download>⬇ Download Letter</a></li>
+							</ul>
+						</div>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Gary Byte</strong> &mdash; <em>Senior Application Architect, Paycom</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Team Lead</p>
-						<p style="margin:0; line-height:1.7;">Gary writes that Averie quickly became someone the team could consistently rely on — not only for technical contributions, but for the positive energy and collaboration she brought every day. He highlights her ability to take full ownership of tasks even in unfamiliar areas, her attention to detail, and his genuine care for doing things the right way. He adds that her personable, supportive presence had a meaningful impact on team culture, especially during busy or challenging periods, and that he would gladly work with her again.</p>
+					<h3 style="margin-top:2rem;">💼 LinkedIn Recommendations</h3>
+					<p><em>Selected recommendations from <a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" style="font-weight:bold; text-decoration:underline;">LinkedIn 🔗</a></em></p>
+
+					<!-- Kasey Kim -->
+					<div class="rec-card">
+						<p class="rec-name">Kasey Kim</p>
+						<p class="rec-title">Software Engineer at 1Password &nbsp;·&nbsp; Same team</p>
+						<p class="rec-quote">"She set the bar for what a <strong>good teammate and engineer</strong> looks like. She moves comfortably between <strong>frontend and backend</strong> without missing a beat — and she genuinely cares about the people she works with. I'd <strong>jump at the chance to work with her again</strong>."</p>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Siyuan Yin</strong> &mdash; <em>Software Engineer at Google</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Different team</p>
-						<p style="margin:0; line-height:1.7;">"Ngoc is one of the warmest and most resourceful teammates I've had the pleasure of working with. She brings a welcoming energy to the team that makes every collaboration a happy and productive experience. Beyond her technical skills, her proactive nature and genuine kindness make her an incredible asset to any workplace culture."</p>
+					<!-- Rahul -->
+					<div class="rec-card">
+						<p class="rec-name">Rahul Kumar Sharma</p>
+						<p class="rec-title">Senior Software Developer &nbsp;·&nbsp; Same team</p>
+						<p class="rec-quote">"Averie sets the <strong>standard for attention to detail</strong>, regularly identifying potential oversights during design phases to prevent production defects. Her technical impact consistently placed her among the <strong>top 30 developers out of 1,500+</strong> for six consecutive months. A <strong>technically brilliant, relentlessly reliable engineer</strong>."</p>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>John Johnson</strong> &mdash; <em>Software Engineer | Leader | Coach (Mentor)</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Mentor</p>
-						<p style="margin:0; line-height:1.7;">John mentored Averie both as an intern and as a full-time developer. He notes her incredible drive for learning and self-improvement during her internship, and an impressive growth in software engineering skills. After she transitioned to full-time, she signed up to mentor subsequent intern classes — bringing the same drive for improvement and instilling it in others. He describes her as a strong developer with solid software engineering skills and a solid foundation of leadership skills as well.</p>
+					<!-- Robin Elliott -->
+					<div class="rec-card">
+						<p class="rec-name">Robin Elliott</p>
+						<p class="rec-title">Manager of Tech New Hire Development & Training, Paycom &nbsp;·&nbsp; Mentor (4 years)</p>
+						<p class="rec-quote">"Averie consistently delivers <strong>quality, clean, scalable, and maintainable code</strong> — never afraid to tackle hard things, constantly learning and sharing knowledge. She has a <strong>winning mindset</strong> and is the teammate who always goes above and beyond. My recommendation is <strong>100% without hesitation</strong>."</p>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Robin Elliott</strong> &mdash; <em>Manager of Tech New Hire Development & Training, Paycom (Mentor)</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Mentor</p>
-						<p style="margin:0; line-height:1.7;">Robin has worked with and watched Averie grow over 4 years — from intern to professional software developer. She describes Averie as consistently delivering quality, clean, scalable, and maintainable code; never afraid to tackle hard things; and constantly learning and sharing new knowledge with the team. Robin notes that Averie has a winning mindset and is the teammate who always goes above and beyond. Her recommendation is 100% without hesitation.</p>
+					<!-- Khush -->
+					<div class="rec-card">
+						<p class="rec-name">Khush Upadhyay</p>
+						<p class="rec-title">Full-Stack Developer, Senior to Averie at Paycom &nbsp;·&nbsp; 3.5 years</p>
+						<p class="rec-quote">"Strong technical expertise across <strong>frontend, backend, and scalable web applications</strong>. Delivers consistently even under <strong>tight timelines or changing requirements</strong> — dependable, collaborative, and a genuinely <strong>valued member of the team</strong>."</p>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Khush Upadhyay</strong> &mdash; <em>Full-Stack Developer | Senior to Averie at Paycom</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Senior colleague, 3.5 years</p>
-						<p style="margin:0; line-height:1.7;">Khush worked alongside Averie for 3.5 years and describes her as a developer with strong technical expertise across frontend development, backend integration, and scalable web applications. He highlights her ability to quickly understand requirements, write clean and maintainable code, and deliver consistently — even under tight timelines or changing requirements. He also praises her problem-solving mindset, openness to feedback, and positive attitude, calling her dependable, collaborative, and a genuinely valued member of the team.</p>
+					<!-- Gary Byte -->
+					<div class="rec-card">
+						<p class="rec-name">Gary Byte</p>
+						<p class="rec-title">Senior Application Architect, Paycom &nbsp;·&nbsp; Team Lead</p>
+						<p class="rec-quote">"Averie quickly became someone the team could <strong>consistently rely on</strong> — not only for technical contributions, but for the <strong>positive energy and collaboration</strong> she brought every day. Her presence had a <strong>meaningful impact on team culture</strong>."</p>
 					</div>
 
-					<div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
-						<p style="margin:0 0 4px 0;"><strong>Jan Rejas II</strong> &mdash; <em>Software Developer, Paycom | University of Houston</em></p>
-						<p style="font-size:0.8em; opacity:0.6; margin:0 0 12px 0;">May 2026 &nbsp;·&nbsp; Different team</p>
-						<p style="margin:0; line-height:1.7;">Jan was impressed by Averie's adaptability and growth mindset, even across different teams. He notes that she was always collaborative and reliable when discussing core reporting infrastructure, always willing to tackle issues without reservation despite limited prior context, and consistently took time to help others better understand her team's module. He highly recommends her for any company looking for a dedicated and skilled software developer.</p>
-					</div>
-
-					<p style="text-align:center; margin-top: 10px;">
+					<p style="text-align:center; margin-top: 20px;">
 						<a href="https://www.linkedin.com/in/ngocphan-np/details/recommendations/" target="_blank" class="button">View All on LinkedIn</a>
 					</p>
+				</article>
+
+				<!-- Resume -->
+				<article id="resume">
+					<h2 class="major">Resume</h2>
+					<div class="resume-container">
+						<p>Feel free to view or download my resume below.</p>
+						<ul class="actions" style="justify-content:center;">
+							<li><a href="images/AverieNgocPhan_Resume.pdf" class="button" download>⬇ Download Resume</a></li>
+							<li><a href="images/AverieNgocPhan_Resume.pdf" class="button" target="_blank" style="margin-left:10px;">🔗 Open in Browser</a></li>
+						</ul>
+						<iframe src="images/AverieNgocPhan_Resume.pdf"></iframe>
+					</div>
 				</article>
 
 				<!-- Contact -->
@@ -549,5 +535,18 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			function toggleLetter(id) {
+				const el = document.getElementById(id);
+				const btn = el.previousElementSibling;
+				if (el.classList.contains('open')) {
+					el.classList.remove('open');
+					btn.textContent = '+ View Full Letter';
+				} else {
+					el.classList.add('open');
+					btn.textContent = '− Hide Letter';
+				}
+			}
+		</script>
 	</body>
 </html>
