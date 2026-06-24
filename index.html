@@ -29,6 +29,17 @@
 				display: none !important;
 			}
 
+			/* ── Mobile profile photo fix ── */
+			/* The theme sizes .logo at 4.75rem on mobile but the img is 80px,
+			   so it overflows and gets cut by the vertical connector line.
+			   Fix: constrain the img to fit inside the logo circle. */
+			@media screen and (max-width: 736px) {
+				#header .logo img {
+					width: 4.55rem !important;
+					height: 4.55rem !important;
+				}
+			}
+
 			/* ── Experience cards ── */
 			.exp-card {
 				margin-bottom: 2rem;
