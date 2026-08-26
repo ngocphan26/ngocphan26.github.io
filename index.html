@@ -529,7 +529,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
 		<script>
 			// The native PDF viewers built into Safari and Chrome do not agree on how
 			// to fit a page into a given box, which is what made the resume look
@@ -541,7 +541,7 @@
 				if (!container || typeof pdfjsLib === 'undefined') return;
 
 				pdfjsLib.GlobalWorkerOptions.workerSrc =
-					'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.worker.min.js';
+					'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
 
 				function renderResume() {
 					container.innerHTML = '';
