@@ -157,6 +157,18 @@
 				border-radius: 8px;
 				margin: 16px 0;
 			}
+
+			/* ── Resume PDF frame ──
+			   Safari's built-in PDF viewer does not support the "page-width"
+			   zoom value that Chrome's viewer understands, and instead fits
+			   the whole page inside whatever box it is given. Sizing this box
+			   to a resume page's own proportions (8.5 x 11) means Safari's
+			   default fit and Chrome's fit-width both land on the same result. */
+			.resume-frame {
+				max-width: 850px;
+				aspect-ratio: 8.5 / 11;
+				margin: 16px auto;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -501,7 +513,9 @@
 					<div style="padding: 0.8rem 3.5rem 0.8rem 1.5rem; display:flex; justify-content:flex-end;">
 						<a href="images/AverieNgocPhan_Resume.pdf" download style="font-size:0.72em; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; color: rgba(255,255,255,0.7); text-decoration:none; letter-spacing:0.5px;">⬇ Download</a>
 					</div>
-					<iframe src="images/AverieNgocPhan_Resume.pdf#zoom=page-width&toolbar=0&navpanes=0&scrollbar=1" style="width:100%; height:80vh; border:none; display:block;"></iframe>
+					<div class="resume-frame">
+						<iframe src="images/AverieNgocPhan_Resume.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH" style="width:100%; height:100%; border:none; display:block;"></iframe>
+					</div>
 				</article>
 
 				<!-- Contact -->
