@@ -499,9 +499,9 @@
 				<!-- Resume -->
 				<article id="resume" style="max-width:100%; padding:0;">
 					<div style="padding: 0.8rem 3.5rem 0.8rem 1.5rem; display:flex; justify-content:flex-end;">
-						<a href="images/AverieNgocPhan_Resume.pdf" download style="font-size:0.72em; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; color: rgba(255,255,255,0.7); text-decoration:none; letter-spacing:0.5px;">⬇ Download</a>
+						<a href="images/AverieNgocPhan_Resume.pdf" target="_blank" rel="noopener" style="font-size:0.72em; padding: 4px 12px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; color: rgba(255,255,255,0.7); text-decoration:none; letter-spacing:0.5px;">⬇ Download</a>
 					</div>
-					<div id="resume-viewer" style="max-width:850px; margin:0 auto 24px;"></div>
+					<iframe src="images/AverieNgocPhan_Resume.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=1" style="width:100%; height:80vh; border:none; display:block;"></iframe>
 				</article>
 
 				<!-- Contact -->
@@ -529,66 +529,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
 		<script>
-			// The native PDF viewers built into Safari and Chrome do not agree on how
-			// to fit a page into a given box, which is what made the resume look
-			// correct in one browser and tiny in the other. Rendering the page onto
-			// a canvas ourselves removes that dependency: the same pixels get drawn
-			// the same way in every browser, scaled to fill the container's width.
-			(function () {
-				var container = document.getElementById('resume-viewer');
-				if (!container || typeof pdfjsLib === 'undefined') return;
-
-				pdfjsLib.GlobalWorkerOptions.workerSrc =
-					'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-
-				function renderResume() {
-					container.innerHTML = '';
-					pdfjsLib.getDocument('images/AverieNgocPhan_Resume.pdf').promise.then(function (pdf) {
-						var targetWidth = container.clientWidth;
-
-						function renderPage(pageNum) {
-							if (pageNum > pdf.numPages) return;
-							pdf.getPage(pageNum).then(function (page) {
-								var unscaledViewport = page.getViewport({ scale: 1 });
-								var scale = targetWidth / unscaledViewport.width;
-								var viewport = page.getViewport({ scale: scale });
-								var outputScale = window.devicePixelRatio || 1;
-
-								var canvas = document.createElement('canvas');
-								canvas.style.width = '100%';
-								canvas.style.height = 'auto';
-								canvas.style.display = 'block';
-								canvas.style.marginBottom = '12px';
-								canvas.style.borderRadius = '8px';
-								canvas.style.boxShadow = '0 2px 12px rgba(0,0,0,0.3)';
-								canvas.width = Math.floor(viewport.width * outputScale);
-								canvas.height = Math.floor(viewport.height * outputScale);
-								container.appendChild(canvas);
-
-								var ctx = canvas.getContext('2d');
-								var transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
-
-								page.render({ canvasContext: ctx, viewport: viewport, transform: transform }).promise.then(function () {
-									renderPage(pageNum + 1);
-								});
-							});
-						}
-
-						renderPage(1);
-					});
-				}
-
-				renderResume();
-
-				var resizeTimer;
-				window.addEventListener('resize', function () {
-					clearTimeout(resizeTimer);
-					resizeTimer = setTimeout(renderResume, 250);
-				});
-			})();
-
 			function toggleLetter(id) {
 				const el = document.getElementById(id);
 				const btn = el.previousElementSibling;
