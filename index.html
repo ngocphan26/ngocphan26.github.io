@@ -462,7 +462,7 @@
 						<p class="rec-quote">"She's the type of engineer who <strong>quietly raises the bar</strong> for the team around her. I'd recommend her <strong>without hesitation</strong>."</p>
 						<button class="toggle-btn" onclick="toggleLetter('shawn')">+ View Full Letter</button>
 						<div id="shawn" class="letter-content">
-							<iframe src="images/Shawn_Khan_Recommendation_Letter_for_Averie_Ngoc_Phan.pdf#navpanes=0" width="100%" height="500px"></iframe>
+							<iframe data-src="images/Shawn_Khan_Recommendation_Letter_for_Averie_Ngoc_Phan.pdf#toolbar=0&navpanes=0" width="100%" height="500px"></iframe>
 						</div>
 					</div>
 
@@ -474,7 +474,7 @@
 						<p class="rec-quote">"Averie sets the <strong>standard for attention to detail</strong> — regularly identifying potential oversights during the Design and Specs phases, <strong>preventing issues from ever reaching production</strong>."</p>
 						<button class="toggle-btn" onclick="toggleLetter('greg')">+ View Full Letter</button>
 						<div id="greg" class="letter-content">
-							<iframe src="images/GregHite.pdf#navpanes=0" width="100%" height="500px"></iframe>
+							<iframe data-src="images/GregHite.pdf#toolbar=0&navpanes=0" width="100%" height="500px"></iframe>
 						</div>
 					</div>
 
@@ -486,7 +486,7 @@
 						<p class="rec-quote">"What distinguishes Averie is her evolution from <strong>skilled implementer</strong> to <strong>strategic product contributor</strong>."</p>
 						<button class="toggle-btn" onclick="toggleLetter('steven')">+ View Full Letter</button>
 						<div id="steven" class="letter-content">
-							<iframe src="images/StevenPrudhomme.pdf#navpanes=0" width="100%" height="500px"></iframe>
+							<iframe data-src="images/StevenPrudhomme.pdf#toolbar=0&navpanes=0" width="100%" height="500px"></iframe>
 						</div>
 					</div>
 
@@ -581,6 +581,10 @@
 				} else {
 					el.classList.add('open');
 					btn.textContent = '− Hide Letter';
+					const iframe = el.querySelector('iframe');
+					if (iframe && !iframe.src) {
+						iframe.src = iframe.dataset.src;
+					}
 				}
 			}
 		</script>
